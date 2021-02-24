@@ -26,4 +26,5 @@ jobs:
           java -version
           sudo apt install default-jdk
           javac -version
+          npm -V
           
