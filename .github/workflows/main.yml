@@ -27,4 +27,5 @@ jobs:
           sudo apt install default-jdk
           javac -version
           npm -v
+          sudo apt install postgresql postgresql-contrib
           
