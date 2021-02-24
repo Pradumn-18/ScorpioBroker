@@ -33,6 +33,7 @@ jobs:
       - name: Setting Up of Postgresql 
         run: |
           sudo su - postgres
+          \conninfo
           psql -U postgres -c "create extension postgis;"
           psql -U postgres -c "create database ngb;"
           psql -U postgres -c "create user ngb with password 'ngb';"
