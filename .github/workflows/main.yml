@@ -28,6 +28,7 @@ jobs:
           javac -version
           npm -v
           sudo apt install postgresql postgresql-contrib
+          sudo apt install postgis postgresql-9.6-postgis-2.3
           
       - name: Setting Up of Postgresql 
         run: |
