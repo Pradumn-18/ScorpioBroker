@@ -28,11 +28,11 @@ jobs:
           javac -version
           npm -v
           sudo apt install postgresql postgresql-contrib
+          /usr/lib/postgresql/9.6/bin/pg_ctl -D /var/lib/postgresql/9.6/main -l logfile start
           sudo apt install postgis postgresql-9.6-postgis-2.3
           
       - name: Setting Up of Postgresql 
         run: |
-          /usr/lib/postgresql/9.6/bin/pg_ctl -D /var/lib/postgresql/9.6/main -l logfile start
           sudo su - postgres
           \conninfo
           psql -U postgres -c "create extension postgis;"
